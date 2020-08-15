@@ -2,7 +2,7 @@
     <div class="card-header">
         {{titulo}}
     </div>
-    <div class="card-body">
+    <div *ngIf="cursos && cursos.length > 0" class="card-body">
         <div>
             <table class="table">
                 <thead>
@@ -70,5 +70,8 @@
                 </tbody>
             </table>
         </div>
+    </div>
+    <div *ngIf="!cursos || cursos.length == 0" class="alert alert-info">
+        algo salió mal 💔, intenta nuevamente o más tarde.
     </div>
 </div>
