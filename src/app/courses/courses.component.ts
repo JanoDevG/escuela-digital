@@ -39,10 +39,4 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  editarCurso(curso: any) {
-    console.log("edit: ", curso);
-  }
-  eliminarCurso(curso: any) {
-    console.log("delete: ", curso);
-  }
 }
