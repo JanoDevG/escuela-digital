@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'AGI-root',
-  template: `
-  <AGI-sidenav></AGI-sidenav>
-  <AGI-dashboard></AGI-dashboard>
-  <AGI-sidenav></AGI-sidenav>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
