@@ -33,9 +33,16 @@ export class CoursesComponent implements OnInit {
     imageUrl: 'assets/images/react.svg'
     },
   ];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  editarCurso(curso: any) {
+    console.log("edit: ", curso);
+  }
+  eliminarCurso(curso: any) {
+    console.log("delete: ", curso);
+  }
 }

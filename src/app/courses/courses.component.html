@@ -22,7 +22,14 @@
                         <td>{{cursos[0].startDate}}</td>
                         <td>{{cursos[0].price}}</td>
                         <td>{{cursos[0].rating}}</td>
-                        <td></td>
+                        <td>
+                            <span style="float:left;">
+                                <i class="fa fa-edit" (click)="editarCurso(cursos[0])"></i>
+                            </span>
+                            <span style="float: right;">
+                                <i class="fa fa-trash" (click)="eliminarCurso(cursos[0])"></i>
+                            </span>
+                        </td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -33,7 +40,14 @@
                         <td>{{cursos[1].startDate}}</td>
                         <td>{{cursos[1].price}}</td>
                         <td>{{cursos[1].rating}}</td>
-                        <td></td>
+                        <td>
+                            <span style="float:left;">
+                                <i class="fa fa-edit" (click)="editarCurso(cursos[1])"></i>
+                            </span>
+                            <span style="float: right;">
+                                <i class="fa fa-trash" (click)="eliminarCurso(cursos[1])"></i>
+                            </span>
+                        </td>
                     </tr>
                 </tbody>
                 <tbody>
@@ -44,7 +58,14 @@
                         <td>{{cursos[2].startDate}}</td>
                         <td>{{cursos[2].price}}</td>
                         <td>{{cursos[2].rating}}</td>
-                        <td></td>
+                        <td>
+                            <span style="float:left;">
+                                <i class="fa fa-edit" (click)="editarCurso(cursos[2])"></i>
+                            </span>
+                            <span style="float: right;">
+                                <i class="fa fa-trash" (click)="eliminarCurso(cursos[2])"></i>
+                            </span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
