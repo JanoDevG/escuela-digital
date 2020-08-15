@@ -15,55 +15,19 @@
                     <th>Acciones</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img [src]="cursos[0].imageUrl" alt=""></td>
-                        <td>{{cursos[0].name}}</td>
-                        <td>{{cursos[0].description}}</td>
-                        <td>{{cursos[0].startDate}}</td>
-                        <td>{{cursos[0].price}}</td>
-                        <td>{{cursos[0].rating}}</td>
+                    <tr *ngFor="let curso  of cursos">
+                        <td><img [src]="curso.imageUrl" alt=""></td>
+                        <td>{{curso.name}}</td>
+                        <td>{{curso.description}}</td>
+                        <td>{{curso.startDate}}</td>
+                        <td>{{curso.price}}</td>
+                        <td>{{curso.rating}}</td>
                         <td>
                             <span style="float:left;">
-                                <i class="fa fa-edit" (click)="editarCurso(cursos[0])"></i>
+                                <i class="fa fa-edit" (click)="editarCurso(curso)"></i>
                             </span>
                             <span style="float: right;">
-                                <i class="fa fa-trash" (click)="eliminarCurso(cursos[0])"></i>
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td><img [src]="cursos[1].imageUrl" alt=""></td>
-                        <td>{{cursos[1].name}}</td>
-                        <td>{{cursos[1].description}}</td>
-                        <td>{{cursos[1].startDate}}</td>
-                        <td>{{cursos[1].price}}</td>
-                        <td>{{cursos[1].rating}}</td>
-                        <td>
-                            <span style="float:left;">
-                                <i class="fa fa-edit" (click)="editarCurso(cursos[1])"></i>
-                            </span>
-                            <span style="float: right;">
-                                <i class="fa fa-trash" (click)="eliminarCurso(cursos[1])"></i>
-                            </span>
-                        </td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td><img [src]="cursos[2].imageUrl" alt=""></td>
-                        <td>{{cursos[2].name}}</td>
-                        <td>{{cursos[2].description}}</td>
-                        <td>{{cursos[2].startDate}}</td>
-                        <td>{{cursos[2].price}}</td>
-                        <td>{{cursos[2].rating}}</td>
-                        <td>
-                            <span style="float:left;">
-                                <i class="fa fa-edit" (click)="editarCurso(cursos[2])"></i>
-                            </span>
-                            <span style="float: right;">
-                                <i class="fa fa-trash" (click)="eliminarCurso(cursos[2])"></i>
+                                <i class="fa fa-trash" (click)="eliminarCurso(curso)"></i>
                             </span>
                         </td>
                     </tr>
@@ -71,7 +35,7 @@
             </table>
         </div>
     </div>
-    <div *ngIf="!cursos || cursos.length == 0" class="alert alert-info">
+    <div *ngIf="!cursos || cursos.length == 0" class="alert alert -info">
         algo salió mal 💔, intenta nuevamente o más tarde.
     </div>
 </div>
