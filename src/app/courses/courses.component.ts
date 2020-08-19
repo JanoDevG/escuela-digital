@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'AGI-courses',
@@ -34,9 +35,23 @@ export class CoursesComponent implements OnInit {
     },
   ];
 
-  constructor() { }
-
+  constructor(private router: Router) { 
+    
+  }
   ngOnInit(): void {
+  }
+
+  onEditCurso(curso: any){
+    console.log('[Courses] edit', curso);
+    //redireccionamos al componente a través de la ruta
+    this.router.navigate([`course/${curso.id}`]);
+  }
+
+  onDeleteCurso(curso : any){
+    console.log('[Courses] edit', curso);
+    this.cursos = this.cursos.filter((x: any) =>{
+      return x.id !== curso.id;
+    });
   }
 
 }

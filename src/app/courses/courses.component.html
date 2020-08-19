@@ -23,7 +23,10 @@
                         <td>{{curso.price}}</td>
                         <td>{{curso.rating}}</td>
                         <td>
-                            <AGI-course-action [curso]="curso"> </AGI-course-action>
+                            <AGI-course-action 
+                            [curso]="curso"
+                            (edit)="onEditCurso($event)"
+                            (delete)="onDeleteCurso($event)"> </AGI-course-action>
                         </td>
                     </tr>
                 </tbody>

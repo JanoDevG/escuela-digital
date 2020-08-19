@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Curso } from '../curso';
 
 @Component({
@@ -11,15 +11,23 @@ export class CourseActionComponent implements OnInit {
   @Input()
   curso: Curso;
 
+  @Output()
+  edit: EventEmitter<Curso> = new EventEmitter<Curso>();
+
+  @Output()
+  delete: EventEmitter<Curso> = new EventEmitter<Curso>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
   
-  editarCurso(curso: any) {
+  editarCurso(curso: Curso) {
     console.log("edit: ", curso);
+    this.edit.emit(curso);
   }
-  eliminarCurso(curso: any) {
+  eliminarCurso(curso: Curso) {
     console.log("delete: ", curso);
+    this.delete.emit(curso);
   }
 }
